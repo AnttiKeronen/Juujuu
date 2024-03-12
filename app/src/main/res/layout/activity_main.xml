@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Etunimi"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sukunimi"
+        android:layout_below="@id/editFirstName"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sähköposti"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/editLastName"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnAddUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lisää käyttäjä"
+        android:layout_below="@id/editEmail"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnShowUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Näytä käyttäjät"
+        android:layout_below="@id/btnAddUser"/>
+
+    <!-- Tuotantotalouden tutkinto-ohjelman nappi -->
+
+    <!-- Laskennallisen tekniikan tutkinto-ohjelman nappi -->
+
+    <RadioButton
+        android:id="@+id/seRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tietotekniikan tutkinto-ohjelma" />
+
+    <RadioButton
+        android:id="@+id/imRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seRadioButton"
+        android:layout_marginTop="288dp"
+        android:text="Tuotantotalouden tutkinto-ohjelma" />
+
+    <RadioButton
+        android:id="@+id/ceRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imRadioButton"
+        android:text="Laskennallisen tekniikan tutkinto-ohjelma" />
+
+    <!-- Sähkötekniikan tutkinto-ohjelman nappi -->
+    <RadioButton
+        android:id="@+id/eeRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ceRadioButton"
+        android:text="Sähkötekniikan tutkinto-ohjelma" />
+
+    <!-- RadioGroup tutkinto-ohjelmien listaukselle -->
+    <RadioGroup
+        android:id="@+id/radioDegreeProgram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eeRadioButton"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+
+
+    </RadioGroup>
+
+</RelativeLayout>
+
+
+
