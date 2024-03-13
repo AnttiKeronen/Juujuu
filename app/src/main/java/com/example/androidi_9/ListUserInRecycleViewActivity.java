@@ -22,7 +22,7 @@ public class ListUserInRecycleViewActivity extends RecyclerView.Adapter<ListUser
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.activity_add_user, parent, false);
+        View itemView = mInflater.inflate(R.layout.activity_list_users, parent, false);
         return new UserViewHolder(itemView);
     }
 
@@ -48,11 +48,12 @@ public class ListUserInRecycleViewActivity extends RecyclerView.Adapter<ListUser
 
         public UserViewHolder(View itemView) {
             super(itemView);
-            firstNameTextView = itemView.findViewById(R.id.editFirstName);
-            lastNameTextView = itemView.findViewById(R.id.editLastName);
-            emailTextView = itemView.findViewById(R.id.editEmail);
-            degreeTextView = itemView.findViewById(R.id.radioDegreeProgram);
+            firstNameTextView = itemView.findViewById(R.id.textFirstName);
+            lastNameTextView = itemView.findViewById(R.id.textLastName);
+            emailTextView = itemView.findViewById(R.id.textEmail);
+            degreeTextView = itemView.findViewById(R.id.textDegree);
         }
     }
 }
+
 
