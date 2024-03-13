@@ -6,38 +6,32 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/editFirstName"
+        android:id="@+id/firstNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Etunimi"
+        android:hint="@string/first_name"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/editLastName"
+        android:id="@+id/lastNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Last Name"
+        android:text="@string/last_name"
         android:textSize="18sp"/>
-
-
 
     <TextView
-        android:id="@+id/editEmail"
+        android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="@string/email"
         android:textSize="18sp"/>
-
-
 
     <TextView
-        android:id="@+id/radioDegreeProgram"
+        android:id="@+id/degreeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Degree"
+        android:text="@string/degree"
         android:textSize="18sp"/>
-
-
-
 
 </LinearLayout>
+

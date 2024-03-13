@@ -10,7 +10,10 @@
     <string name="add_user_button">Lisää käyttäjä</string>
     <string name="show_users_button">Näytä käyttäjät</string>
     <string name="no_users_added">Ei lisättyjä käyttäjiä.</string>
-
+    <string name="first_name">Etunimi</string>
+    <string name="last_name">Sukunimi</string>
+    <string name="email">Sähköposti</string>
+    <string name="degree">Tutkinto</string>
 </resources>
 
 
