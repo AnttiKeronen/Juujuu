@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 public class ListUsersInTextViewActivity extends AppCompatActivity {
 
     @Override
@@ -13,13 +12,16 @@ public class ListUsersInTextViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_users);
 
+
+        UserStorage userStorage = UserStorage.getInstance();
         RecyclerView recyclerView = findViewById(R.id.rvUserView);
-        ListUserInRecycleViewActivity userListAdapter = new ListUserInRecycleViewActivity(this, UserStorage.getInstance().getUsers());
+        ListUserInRecycleViewActivity userListAdapter = new ListUserInRecycleViewActivity(this, userStorage.getUsers());
 
         recyclerView.setAdapter(userListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
+
 
 
 
