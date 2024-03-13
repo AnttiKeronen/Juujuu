@@ -18,7 +18,7 @@ public class AddUserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_user);
+        setContentView(R.layout.adduseractivity);
 
         firstNameEditText = findViewById(R.id.editFirstName);
         lastNameEditText = findViewById(R.id.editLastName);
@@ -34,7 +34,6 @@ public class AddUserActivity extends AppCompatActivity {
             User user = new User(firstName, lastName, email, degree);
             UserStorage.getInstance().addUser(user);
 
-
             firstNameEditText.setText("");
             lastNameEditText.setText("");
             emailEditText.setText("");
@@ -48,6 +47,7 @@ public class AddUserActivity extends AppCompatActivity {
         });
     }
 }
+
 
 
 

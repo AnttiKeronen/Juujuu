@@ -9,6 +9,7 @@
     <string name="degree_sahkotekniikka">Sähkötekniikka</string>
     <string name="add_user_button">Lisää käyttäjä</string>
     <string name="show_users_button">Näytä käyttäjät</string>
+    <string name="no_users_added">Ei lisättyjä käyttäjiä.</string>
 
 </resources>
 
