@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button showUsersButton = findViewById(R.id.showUsersButton);
         showUsersButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ListUsersInTextViewActivity.class);
+            Intent intent = new Intent(MainActivity.this, ListUserInTextViewActivity.class);
             startActivity(intent);
         });
     }

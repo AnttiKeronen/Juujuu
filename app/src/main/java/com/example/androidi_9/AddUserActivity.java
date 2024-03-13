@@ -42,7 +42,7 @@ public class AddUserActivity extends AppCompatActivity {
 
         Button showUsersButton = findViewById(R.id.showUsersButton);
         showUsersButton.setOnClickListener(view -> {
-            Intent intent = new Intent(AddUserActivity.this, ListUsersInTextViewActivity.class);
+            Intent intent = new Intent(AddUserActivity.this, ListUserInTextViewActivity.class);
             startActivity(intent);
         });
     }

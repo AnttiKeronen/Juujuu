@@ -15,7 +15,7 @@
         <activity
             android:name=".AddUserActivity" />
         <activity
-            android:name=".ListUsersInTextViewActivity" />
+            android:name=".ListUserInTextViewActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
