@@ -6,17 +6,19 @@
     android:padding="16dp">
 
 
-    <TextView
-        android:id="@+id/textView_first_name"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="First Name"
-        android:textSize="18sp"/>
+        android:hint="Etunimi"
+        android:layout_margin="16dp"/>
+
+
 
 
     <!-- user_list_item.xml -->
     <TextView
-        android:id="@+id/textView_last_name"
+        android:id="@+id/editLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Last Name"
@@ -25,7 +27,7 @@
 
 
     <TextView
-        android:id="@+id/textView_email"
+        android:id="@+id/editEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
@@ -34,11 +36,25 @@
 
 
     <TextView
-        android:id="@+id/textView_degree"
+        android:id="@+id/radioDegreeProgram"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Degree"
         android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/addUserButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lisää käyttäjä" />
+
+    <Button
+        android:id="@+id/showUsersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Näytä käyttäjät" />
+
+
 
 
 

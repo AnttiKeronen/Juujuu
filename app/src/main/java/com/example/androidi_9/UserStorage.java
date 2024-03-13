@@ -1,15 +1,17 @@
 package com.example.androidi_9;
-import java.util.List;
+
 import java.util.ArrayList;
+import java.util.List;
+
 public class UserStorage {
     private static UserStorage instance;
-    private List<User> userList;
+    private final List<User> userList;
 
     private UserStorage() {
         userList = new ArrayList<>();
     }
 
-    public static synchronized UserStorage getInstance() {
+    public static UserStorage getInstance() {
         if (instance == null) {
             instance = new UserStorage();
         }
@@ -24,5 +26,7 @@ public class UserStorage {
         return userList;
     }
 }
+
+
 
 

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Androidi_9</string>
+    <string name="first_name_hint">Etunimi</string>
+    <string name="last_name_hint">Sukunimi</string>
+    <string name="email_hint">Sähköposti</string>
+    <string name="degree_tietotekniikka">Tietotekniikka</string>
+    <string name="degree_tuotantotalous">Tuotantotalous</string>
+    <string name="degree_laskennallinen_tekniikka">Laskennallinen tekniikka</string>
+    <string name="degree_sahkotekniikka">Sähkötekniikka</string>
+    <string name="add_user_button">Lisää käyttäjä</string>
+    <string name="show_users_button">Näytä käyttäjät</string>
+
 </resources>
+
+

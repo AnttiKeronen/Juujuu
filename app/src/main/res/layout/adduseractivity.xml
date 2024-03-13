@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddUserActivity">
+
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name_hint"
+        android:layout_margin="8dp"
+        android:inputType="textPersonName"
+        android:autofillHints="nameGiven"
+        />
+
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/last_name_hint"
+        android:layout_below="@id/editFirstName"
+        android:layout_margin="8dp"
+        android:inputType="textPersonName"
+        android:autofillHints="nameFamily"
+        />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_hint"
+        android:layout_below="@id/editLastName"
+        android:layout_margin="8dp"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress" />
+
+    <RadioGroup
+        android:id="@+id/radioDegreeProgram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editEmail"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/seRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_tietotekniikka" />
+
+
+        <RadioButton
+            android:id="@+id/imRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_tuotantotalous" />
+
+        <RadioButton
+            android:id="@+id/ceRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_laskennallinen_tekniikka" />
+
+        <RadioButton
+            android:id="@+id/eeRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_sahkotekniikka" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/addUserButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_user_button"
+        android:layout_below="@id/radioDegreeProgram"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:id="@+id/showUsersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_users_button"
+        android:layout_below="@id/addUserButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+

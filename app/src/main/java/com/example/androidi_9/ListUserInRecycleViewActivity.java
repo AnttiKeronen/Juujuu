@@ -9,12 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserViewHolder> {
+public class ListUserInRecycleViewActivity extends RecyclerView.Adapter<ListUserInRecycleViewActivity.UserViewHolder> {
 
-    private List<User> mUserList;
-    private LayoutInflater mInflater;
+    private final List<User> mUserList;
+    private final LayoutInflater mInflater;
 
-    public UserListAdapter(Context context, List<User> userList) {
+    public ListUserInRecycleViewActivity(Context context, List<User> userList) {
         mInflater = LayoutInflater.from(context);
         mUserList = userList;
     }
@@ -22,7 +22,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.user_list_item, parent, false);
+        View itemView = mInflater.inflate(R.layout.activity_add_user, parent, false);
         return new UserViewHolder(itemView);
     }
 
@@ -40,7 +40,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
         return mUserList.size();
     }
 
-    public class UserViewHolder extends RecyclerView.ViewHolder {
+    public static class UserViewHolder extends RecyclerView.ViewHolder {
         public final TextView firstNameTextView;
         public final TextView lastNameTextView;
         public final TextView emailTextView;
@@ -48,10 +48,10 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
 
         public UserViewHolder(View itemView) {
             super(itemView);
-            firstNameTextView = itemView.findViewById(R.id.textView_first_name);
-            lastNameTextView = itemView.findViewById(R.id.textView_last_name);
-            emailTextView = itemView.findViewById(R.id.textView_email);
-            degreeTextView = itemView.findViewById(R.id.textView_degree);
+            firstNameTextView = itemView.findViewById(R.id.editFirstName);
+            lastNameTextView = itemView.findViewById(R.id.editLastName);
+            emailTextView = itemView.findViewById(R.id.editEmail);
+            degreeTextView = itemView.findViewById(R.id.radioDegreeProgram);
         }
     }
 }
