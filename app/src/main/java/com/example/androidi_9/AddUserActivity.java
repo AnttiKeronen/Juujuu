@@ -11,7 +11,10 @@ import java.util.List;
 import java.util.ArrayList;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 public class AddUserActivity extends AppCompatActivity {
     private EditText editFirstName, editLastName, editEmail;
@@ -37,7 +40,7 @@ public class AddUserActivity extends AppCompatActivity {
 
         addUserButton = findViewById(R.id.addUserButton);
 
-        userList = new ArrayList<>();
+        userList = loadUserList();
 
         addUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +65,20 @@ public class AddUserActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private List<User> loadUserList() {
+        List<User> loadedUserList = new ArrayList<>();
+        try {
+            FileInputStream fileIn = openFileInput("users.data");
+            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+            loadedUserList = (List<User>) objectIn.readObject();
+            objectIn.close();
+            fileIn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return loadedUserList;
     }
 
     private String getSelectedDegree() {
@@ -89,7 +106,15 @@ public class AddUserActivity extends AppCompatActivity {
     }
 
     private void saveUserList() {
-        // Implement this method to save the userList to storage
+        try {
+            FileOutputStream fileOut = openFileOutput("users.data", MODE_PRIVATE);
+            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+            objectOut.writeObject(userList);
+            objectOut.close();
+            fileOut.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void clearFields() {
@@ -102,6 +127,8 @@ public class AddUserActivity extends AppCompatActivity {
         phdCheckBox.setChecked(false);
     }
 }
+
+
 
 
 
