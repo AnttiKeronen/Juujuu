@@ -40,7 +40,7 @@ public class AddUserActivity extends AppCompatActivity {
 
         addUserButton = findViewById(R.id.addUserButton);
 
-        userList = loadUserList();
+        userList = loadUserList(); // Lataa käyttäjät automaattisesti
 
         addUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,6 +127,7 @@ public class AddUserActivity extends AppCompatActivity {
         phdCheckBox.setChecked(false);
     }
 }
+
 
 
 
