@@ -1,17 +1,19 @@
 package com.example.androidi_9;
 
+// UserStorage.java
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserStorage {
     private static UserStorage instance;
-    private final List<User> userList;
+    private List<User> userList;
 
     private UserStorage() {
         userList = new ArrayList<>();
     }
 
-    public static UserStorage getInstance() {
+    public static synchronized UserStorage getInstance() {
         if (instance == null) {
             instance = new UserStorage();
         }

@@ -1,72 +1,67 @@
 package com.example.androidi_9;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.io.Serializable;
 
-public class User implements Parcelable {
-    private final String firstName;
-    private final String lastName;
-    private final String email;
-    private final String degree;
+public class User implements Serializable {
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String degreeProgram;
+    private String degreeLevel;
 
-    public User(String firstName, String lastName, String email, String degree) {
+    public User(String firstName, String lastName, String email, String degreeProgram, String degreeLevel) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.degree = degree;
+        this.degreeProgram = degreeProgram;
+        this.degreeLevel = degreeLevel;
     }
-
 
     public String getFirstName() {
         return firstName;
+    }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
         return lastName;
     }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
     public String getEmail() {
         return email;
     }
 
-
-
-    public String getDegree() {
-        return degree;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    protected User(Parcel in) {
-        firstName = in.readString();
-        lastName = in.readString();
-        email = in.readString();
-        degree = in.readString();
+    public String getDegreeProgram() {
+        return degreeProgram;
     }
 
-    public static final Creator<User> CREATOR = new Creator<User>() {
-        @Override
-        public User createFromParcel(Parcel in) {
-            return new User(in);
-        }
-
-        @Override
-        public User[] newArray(int size) {
-            return new User[size];
-        }
-    };
-
-    @Override
-    public int describeContents() {
-        return 0;
+    public void setDegreeProgram(String degreeProgram) {
+        this.degreeProgram = degreeProgram;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(firstName);
-        dest.writeString(lastName);
-        dest.writeString(email);
-        dest.writeString(degree);
+    public String getDegreeLevel() {
+        return degreeLevel;
+    }
+
+    public void setDegreeLevel(String degreeLevel) {
+        this.degreeLevel = degreeLevel;
     }
 }
+
+
+
+
+
+
+
 
