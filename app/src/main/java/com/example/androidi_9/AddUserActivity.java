@@ -13,8 +13,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
+
 
 public class AddUserActivity extends AppCompatActivity {
     private EditText editFirstName, editLastName, editEmail;
@@ -106,16 +105,20 @@ public class AddUserActivity extends AppCompatActivity {
     }
 
     private void saveUserList() {
-        try {
-            FileOutputStream fileOut = openFileOutput("users.data", MODE_PRIVATE);
-            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            objectOut.writeObject(userList);
-            objectOut.close();
-            fileOut.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        User user = new User(
+                editFirstName.getText().toString(),
+                editLastName.getText().toString(),
+                editEmail.getText().toString(),
+                getSelectedDegree(),
+                getSelectedDegreeLevel()
+        );
+
+        userList.add(user);
+        UserStorage.getInstance().addUser(user);
+        UserStorage.getInstance().saveUsers(this);
     }
+
+
 
     private void clearFields() {
         editFirstName.setText("");
@@ -127,6 +130,26 @@ public class AddUserActivity extends AppCompatActivity {
         phdCheckBox.setChecked(false);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

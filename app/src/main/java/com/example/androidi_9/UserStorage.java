@@ -1,9 +1,13 @@
 package com.example.androidi_9;
 
-// UserStorage.java
-
-import java.util.ArrayList;
+import android.content.Context;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.List;
+import java.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
 
 public class UserStorage {
     private static UserStorage instance;
@@ -27,8 +31,29 @@ public class UserStorage {
     public List<User> getUsers() {
         return userList;
     }
+
+    public void saveUsers(Context context) {
+        try {
+            FileOutputStream fileOut = context.openFileOutput("users.data", Context.MODE_PRIVATE);
+            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+            objectOut.writeObject(userList);
+            objectOut.close();
+            fileOut.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadUsers(Context context) {
+        try (FileInputStream fileIn = context.openFileInput("users.data");
+             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
+            Object obj = objectIn.readObject();
+            if (obj instanceof List<?>) {
+                userList = (List<User>) obj;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
-
-
-
 
