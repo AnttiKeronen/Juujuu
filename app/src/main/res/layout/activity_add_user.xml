@@ -29,25 +29,25 @@
         android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/radioSE"
+            android:id="@+id/eeRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sähkötekniikka" />
 
         <RadioButton
-            android:id="@+id/radioCE"
+            android:id="@+id/ceRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Laskennallinen tekniikka" />
 
         <RadioButton
-            android:id="@+id/radioIM"
+            android:id="@+id/imRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tuotantotalous" />
 
         <RadioButton
-            android:id="@+id/radioTE"
+            android:id="@+id/seRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tietotekniikka" />

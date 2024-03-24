@@ -39,7 +39,7 @@ public class AddUserActivity extends AppCompatActivity {
 
         addUserButton = findViewById(R.id.addUserButton);
 
-        userList = loadUserList(); // Lataa käyttäjät automaattisesti
+        userList = loadUserList();
 
         addUserButton.setOnClickListener(new View.OnClickListener() {
             @Override

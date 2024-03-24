@@ -17,7 +17,7 @@
         <activity
             android:name=".AddUserActivity" />
         <activity
-            android:name=".ListUserInRecycleViewActivity" />
+            android:name=".ListUserActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-public class ListUserInRecycleViewActivity extends AppCompatActivity {
+public class ListUserActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private UserListAdapter adapter;
 

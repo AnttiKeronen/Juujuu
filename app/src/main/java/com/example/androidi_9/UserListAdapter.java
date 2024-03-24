@@ -31,7 +31,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
         holder.textLastName.setText(user.getLastName());
         holder.textEmail.setText(user.getEmail());
         holder.textDegreeProgram.setText(user.getDegreeProgram());
-        holder.textDegreeLevel.setText(user.getDegreeLevel()); // Näytä tutkinto-ohjelman taso
+        holder.textDegreeLevel.setText(user.getDegreeLevel());
     }
 
     @Override
@@ -48,7 +48,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
             textLastName = itemView.findViewById(R.id.textLastName);
             textEmail = itemView.findViewById(R.id.textEmail);
             textDegreeProgram = itemView.findViewById(R.id.textDegreeProgram);
-            textDegreeLevel = itemView.findViewById(R.id.textDegreeLevel);
+            textDegreeLevel = itemView.findViewById(R.id.textUserDegrees);
         }
     }
 }
