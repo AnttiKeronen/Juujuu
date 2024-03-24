@@ -13,6 +13,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.util.Comparator;
+import java.util.Collections;
+
 
 
 public class AddUserActivity extends AppCompatActivity {
@@ -53,9 +56,15 @@ public class AddUserActivity extends AppCompatActivity {
                 User user = new User(firstName, lastName, email, degreeProgram, degreeLevel);
 
                 userList.add(user);
+                Collections.sort(userList, new Comparator<User>() {
+                    @Override
+                    public int compare(User user1, User user2) {
+                        // Compare last names in descending order
+                        return user2.getLastName().compareTo(user1.getLastName());
+                    }
+                });
 
                 UserStorage.getInstance().addUser(user);
-
                 saveUserList();
 
                 clearFields();
@@ -64,6 +73,7 @@ public class AddUserActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     private List<User> loadUserList() {

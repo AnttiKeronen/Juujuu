@@ -1,5 +1,3 @@
-// UserListAdapter.java
-
 package com.example.androidi_9;
 
 import android.view.LayoutInflater;
@@ -31,6 +29,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
         holder.textLastName.setText(user.getLastName());
         holder.textEmail.setText(user.getEmail());
         holder.textDegreeProgram.setText(user.getDegreeProgram());
+
+        // Käytä suoraan degreeLevel-muuttujaa
         holder.textDegreeLevel.setText(user.getDegreeLevel());
     }
 
